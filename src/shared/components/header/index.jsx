@@ -6,7 +6,7 @@ export const Header = () => {
   return(
     <Box
       width="100vw"
-      height="55px"
+      height="8.2vh"
       bgcolor={ lightTheme.palette.background.paper }
     >
       <Img />
