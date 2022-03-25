@@ -1,5 +1,10 @@
+import { Button } from "@mui/material";
+
+
 export const Home = () => {
   return(
-    <p>Home page</p>
+    <>
+      <Button variant="contained" color="primary" >teste</Button>
+    </>
   );
 } 
