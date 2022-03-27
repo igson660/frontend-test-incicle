@@ -6,6 +6,7 @@ export const Endormarketing = () => {
     <Box
       width="21.5vw"
       height="40vh"
+      padding="5px"
       bgcolor="#FFF2DE"
       marginTop="37px"
       marginBottom="20px"
@@ -14,18 +15,19 @@ export const Endormarketing = () => {
       justifyContent="space-evenly"
     >
       <Typography
-        margin="1vw"
+        margin="3px"
         variant="h6"
+        fontSize="13pt"
         component="header"
         gutterBottom
       >
         Endormarketing
       </Typography>
       <Typography
-        margin="1vw"
+        margin="3px"
         marginTop="1vh"
         marginBottom="2vh"
-        fontSize="12pt"
+        fontSize="11pt"
         variant="Body1"
         gutterBottom
       >
