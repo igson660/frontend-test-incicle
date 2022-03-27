@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export const AppContext = createContext();
 
-export function AppContextProvider({ children }) {
+export const AppContextProvider = ({ children }) => {
   const [mainData, setMainData] = useState([]);
   const [management, setManagement] = useState([]);
 
@@ -21,7 +21,7 @@ export function AppContextProvider({ children }) {
       {children}
     </AppContext.Provider>
   );
-}
+};
 
 AppContextProvider.propTypes = {
   children: PropTypes.node,
