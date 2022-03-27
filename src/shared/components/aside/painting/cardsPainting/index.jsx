@@ -1,10 +1,10 @@
 import { Typography, Box } from '@mui/material';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
-import PublicIcon from '@mui/icons-material/Public';
+// import PublicIcon from '@mui/icons-material/Public';
 
 
-const DivImg = styled.div`
+const Img = styled.img`
   width: 60px;
   height: 60px;
   margin-left: 7px;
@@ -15,7 +15,10 @@ const Div = styled.div`
 `;
 
 export const CardPainting = ({ management }) => {
-  const { title, resume_files } = management;
+  const {
+    title,
+    resume_files
+  } = management;
 
   return(
     <Box
@@ -23,6 +26,7 @@ export const CardPainting = ({ management }) => {
       height="86.39px"
       display="flex"
       flexDirection="collunm"
+      bgcolor="primary"
     >
       <Div>
         <Typography
@@ -32,20 +36,17 @@ export const CardPainting = ({ management }) => {
         >
           { title }
         </Typography>
-        <Div>
+        {/* <Div>
           <div>{ PublicIcon }</div>
           <button>{ PublicIcon }</button>
-        </Div>
-      </Div>
-      <Div>
+        </Div> */}
         {
           resume_files && resume_files.map(({ file }, index) => (
-            <DivImg key={ index } >
-              <img 
-                src={file}
-                alt={ `imagen ${file}`}
-              />
-            </DivImg>
+            <Img
+              key={ index }
+              src={file}
+              alt={ `imagen ${file}`}
+            />
           ))
         }
       </Div>
