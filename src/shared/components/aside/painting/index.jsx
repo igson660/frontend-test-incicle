@@ -17,6 +17,7 @@ export const Painting =() => {
       bgcolor="#FFFFFF"
     >
       <Typography
+        marginLeft="0.8vw"
         variant="h6"
         component="header"
         gutterBottom

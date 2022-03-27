@@ -1,17 +1,29 @@
 import { Typography, Box } from '@mui/material';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
-// import PublicIcon from '@mui/icons-material/Public';
-
+import PublicIcon from '@mui/icons-material/Public';
 
 const Img = styled.img`
-  width: 60px;
-  height: 60px;
-  margin-left: 7px;
+  width: 4vw;
+  height: 6vh;
 `;
 
 const Div = styled.div`
   display: flex;
+  flex-direction: column;
+`;
+
+const Albun = styled.div`
+  width: 20.5vw;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+`;
+
+const DivHeader = styled.div`
+  width: 20.5vw;
+  display: flex;
+  justify-content: space-between;
 `;
 
 export const CardPainting = ({ management }) => {
@@ -22,33 +34,39 @@ export const CardPainting = ({ management }) => {
 
   return(
     <Box
-      width="263.08px"
-      height="86.39px"
+      width="20.5vw"
+      height="10vh"
+      margin="10px"
       display="flex"
       flexDirection="collunm"
-      bgcolor="primary"
+      bgcolor="#F2F3F5"
     >
       <Div>
-        <Typography
-          variant="subtitle1"
-          gutterBottom
-          component="div"
-        >
-          { title }
-        </Typography>
-        {/* <Div>
-          <div>{ PublicIcon }</div>
-          <button>{ PublicIcon }</button>
-        </Div> */}
-        {
-          resume_files && resume_files.map(({ file }, index) => (
-            <Img
-              key={ index }
-              src={file}
-              alt={ `imagen ${file}`}
-            />
-          ))
-        }
+        <DivHeader>
+          <Typography
+            marginLeft="0.5vw"
+            variant="subtitle1"
+            gutterBottom
+            component="div"
+          >
+            { title }
+          </Typography>
+          <div>
+            <PublicIcon />
+            <PublicIcon />
+          </div>
+        </DivHeader>
+        <Albun>
+          {
+            resume_files && resume_files.map(({ file }, index) => (
+              <Img
+                key={ index }
+                src={file}
+                alt={ `imagen ${file}`}
+              />
+            ))
+          }
+        </Albun>
       </Div>
     </Box>
   );
