@@ -5,10 +5,7 @@ import { CardPainting } from './cardsPainting';
 
 
 export const Painting =() => {
-  const {
-    management,
-    setManagement
-  } = useAppContext();
+  const { management, setManagement } = useAppContext();
 
   return(
     <Box
