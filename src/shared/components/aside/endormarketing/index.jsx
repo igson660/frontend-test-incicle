@@ -9,8 +9,12 @@ export const Endormarketing = () => {
       bgcolor="#FFF2DE"
       marginTop="37px"
       marginBottom="20px"
+      display="flex"
+      flexDirection="column"
+      justifyContent="space-evenly"
     >
       <Typography
+        margin="1vw"
         variant="h6"
         component="header"
         gutterBottom
@@ -18,6 +22,10 @@ export const Endormarketing = () => {
         Endormarketing
       </Typography>
       <Typography
+        margin="1vw"
+        marginTop="1vh"
+        marginBottom="2vh"
+        fontSize="14pt"
         variant="Body1"
         gutterBottom
       >
