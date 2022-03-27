@@ -31,20 +31,30 @@ export const Main = () => {
         >
         Endomarketing
         </Typography>
-        <div>
-          <Button
-            variant="outlined"
+        <Typography
+          display="flex"
+        >
+          <Typography
+            margin="4px"
           >
-            Tipo
-            <ArrowDropDownIcon />
-          </Button>
-          <Button
-            variant="contained"
+            <Button
+              variant="outlined"
+            >
+                Tipo
+              <ArrowDropDownIcon />
+            </Button>
+          </Typography>
+          <Typography
+            margin="4px"
           >
-            Criar
-            <AddIcon />
-          </Button>
-        </div>
+            <Button
+              variant="contained"
+            >
+              Criar
+              <AddIcon />
+            </Button>
+          </Typography>
+        </Typography>
       </Div>
       <div>
         {
