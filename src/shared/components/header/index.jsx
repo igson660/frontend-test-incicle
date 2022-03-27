@@ -6,6 +6,7 @@ import logo from  '../../../data/logo.png';
 export const Img = styled.div`
   width: 600px;
   height: 100px;
+  margin: 0.5vw;
   margin-left: 30px;
   background-repeat: no-repeat;
   background-image: url(${logo});
@@ -15,7 +16,7 @@ export const Header = () => {
   return(
     <Box
       width="100vw"
-      height="8.2vh"
+      height="7vh"
       bgcolor={ lightTheme.palette.background.paper }
     >
       <Img />
