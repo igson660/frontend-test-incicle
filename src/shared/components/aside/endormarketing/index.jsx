@@ -31,11 +31,16 @@ export const Endormarketing = () => {
       >
         Endomarketing está relacionado às ações de treinamento ou qualificação dos colaboradores da empresa visando um melhor serviço para o cliente. Marketing interno, devido ao nome, é usualmente confundido com Endomarketing mesmo sendo conceitos diferentes.
       </Typography>
-      <Button
-        variant="outlined"
+      <Typography
+        margin="1vw"
+        marginTop="1vh"
       >
+        <Button
+          variant="outlined"
+        >
         Dispensar
-      </Button>
+        </Button>
+      </Typography>
     </Box>
   );
 };

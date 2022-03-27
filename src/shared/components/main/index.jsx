@@ -25,7 +25,7 @@ export const Main = () => {
       <Div>
         <Typography
           marginBottom="0"
-          variant="h2"
+          variant="h3"
           component="header"
           gutterBottom
         >

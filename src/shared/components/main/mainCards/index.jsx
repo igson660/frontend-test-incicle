@@ -75,7 +75,6 @@ export const MainCards = ({ data }) => {
       bgcolor="#FFFFFF"
       display="flex"
       alignItems="center"
-      padding="10px"
       margin="11px"
       justifyContent="space-between"
     >
