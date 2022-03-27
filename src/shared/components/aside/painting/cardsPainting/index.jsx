@@ -2,6 +2,8 @@ import { Typography, Box } from '@mui/material';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import PublicIcon from '@mui/icons-material/Public';
+import { LongMenu } from './buttton';
+
 
 const Img = styled.img`
   width: 4vw;
@@ -26,7 +28,12 @@ const DivHeader = styled.div`
   justify-content: space-between;
 `;
 
-export const CardPainting = ({ management }) => {
+const DivButtons = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const CardPainting = ({ management, index }) => {
   const {
     title,
     resume_files
@@ -51,10 +58,12 @@ export const CardPainting = ({ management }) => {
           >
             { title }
           </Typography>
-          <div>
+          <DivButtons>
             <PublicIcon />
-            <PublicIcon />
-          </div>
+            <LongMenu
+              index={ index }
+            />
+          </DivButtons>
         </DivHeader>
         <Albun>
           {
@@ -76,6 +85,7 @@ export const CardPainting = ({ management }) => {
 CardPainting.propTypes = {
   title: PropTypes.string,
   management: PropTypes.object,
-  resume_files: PropTypes.array
+  resume_files: PropTypes.array,
+  index: PropTypes.number,
 };
 

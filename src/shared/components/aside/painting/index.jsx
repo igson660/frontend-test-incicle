@@ -5,7 +5,7 @@ import { CardPainting } from './cardsPainting';
 
 
 export const Painting =() => {
-  const { management, setManagement } = useAppContext();
+  const { management } = useAppContext();
 
   return(
     <Box
@@ -22,11 +22,11 @@ export const Painting =() => {
         Quadros de Gestão à Vista
       </Typography>
       {
-        management.length > 1 && management.map((item, index) => (
+        management.length > 0 && management.map((item, index) => (
           <CardPainting
             key={ index }
             management={ item }
-            change={ setManagement }
+            index={ index }
           />
         ))
       }

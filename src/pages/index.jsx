@@ -11,6 +11,7 @@ export const Home = () => {
       width="100vw"
       height="100vh"
       bgcolor={ lightTheme.palette.background.default }
+      color="#707070"
     >
       <Header />
       <Box

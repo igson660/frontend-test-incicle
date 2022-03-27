@@ -6,14 +6,14 @@ export const lightTheme = createTheme({
       main: '#3489B1',
       dark: '#245f7b',
       light: '#99c4d8',
-      contrastText: '#707070',
+      contrastText: '#FFFFFF',
     },
 
     secondary: {
       main: 'f0f0f0',
       dark: '3f3f3f',
       light: '3f3f3f',
-      contrastText: '#707070',
+      contrastText: '#FFFFFF',
     },
 
     background: {

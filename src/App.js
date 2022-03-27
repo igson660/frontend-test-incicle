@@ -6,15 +6,14 @@ import { useAppContext } from './shared';
 export const App = () => {
   const {
     setMainData,
+    mainData,
     setManagement,
     management,
-    mainData,
-    
   } = useAppContext();
 
   useEffect(() => {
-    setMainData(allData.data.data);
-    setManagement(allData.management.data[0].boards);
+    if(mainData.length < 1) setMainData(allData.data.data);
+    if(management.length < 1)setManagement(allData.management.data[0].boards);
   }, [management, mainData]);
 
   return (

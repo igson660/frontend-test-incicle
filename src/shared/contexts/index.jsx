@@ -7,11 +7,12 @@ export const AppContextProvider = ({ children }) => {
   const [mainData, setMainData] = useState([]);
   const [management, setManagement] = useState([]);
 
+
   const globalState = {
     mainData,
     setMainData,
     management,
-    setManagement
+    setManagement,
   };
 
   return (

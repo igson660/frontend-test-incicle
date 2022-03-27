@@ -25,7 +25,7 @@ export const Endormarketing = () => {
         margin="1vw"
         marginTop="1vh"
         marginBottom="2vh"
-        fontSize="14pt"
+        fontSize="12pt"
         variant="Body1"
         gutterBottom
       >
