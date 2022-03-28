@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import * as allData from './data';
+import { AppRoutes } from './routes';
+import { useAppContext } from './shared';
 
-function App() {
+export const App = () => {
+  const {
+    setMainData,
+    mainData,
+    setManagement,
+    management,
+  } = useAppContext();
+
+  useEffect(() => {
+    if(mainData.length < 1) setMainData(allData.data.data);
+    if(management.length < 1)setManagement(allData.management.data[0].boards);
+  }, [management, mainData]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppRoutes />
   );
-}
-
-export default App;
+};
