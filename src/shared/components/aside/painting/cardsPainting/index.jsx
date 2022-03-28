@@ -42,7 +42,7 @@ export const CardPainting = ({ management, index }) => {
   return(
     <Box
       width="20.5vw"
-      height="10vh"
+      height="14vh"
       margin="10px"
       display="flex"
       flexDirection="collunm"

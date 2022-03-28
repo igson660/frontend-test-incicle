@@ -10,7 +10,7 @@ export const Painting =() => {
   return(
     <Box
       width="21.5vw"
-      height="40vh"
+      height="53vh"
       bgcolor="#FFFFFF"
     >
       <Typography

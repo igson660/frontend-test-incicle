@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { Typography, Button } from '@mui/material';
 import { Box } from '@mui/system';
 import { useAppContext } from '../../hooks';
@@ -13,19 +14,39 @@ const Div = styled.div`
   margin: 11px;
 `;
 
+const DivMenu = styled.div`
+  width: 10vw;
+  background-color: #FFFFFF;
+  position: absolute;
+`;
+
+const DivItem = styled.div`
+  height: 5vh;
+  &:hover{
+    background-color: #c0bbbb;
+  }
+`;
+
 export const Main = () => {
   const { setMainData, mainData, } = useAppContext();
+  const [menu, setMenu] = useState(false);
+  const [evento, setEvento] = useState(false);
+  const [publi, setPubli] = useState(false);
+  const [comun, setComun] = useState(false);
+
+
+
   return(
     <Box
       marginLeft="4vw"
       width="70vw"
-      height="91.8vh"
       padding="15px"
     >
       <Div>
         <Typography
           marginBottom="0"
           variant="h3"
+          fontSize="25pt"
           component="header"
           gutterBottom
         >
@@ -39,10 +60,47 @@ export const Main = () => {
           >
             <Button
               variant="outlined"
+              onClick={() => setMenu(!menu) }
             >
                 Tipo
               <ArrowDropDownIcon />
             </Button>
+            {
+              menu && (
+                <DivMenu>
+                  <DivItem>
+                    <label>
+                      <input
+                        type="checkbox"
+                        checked={evento}
+                        onChange={ () => setEvento(!evento)}
+                      />
+                        Evento
+                    </label>
+                  </DivItem>
+                  <DivItem>
+                    <label>
+                      <input
+                        type="checkbox"
+                        checked={publi}
+                        onChange={ () => setPubli(!publi)}
+                      />
+                        Publicação
+                    </label>
+                  </DivItem>
+                  <DivItem>
+                    <label>
+                      <input
+                        type="checkbox"
+                        checked={comun}
+                        onChange={ () => setComun(!comun)}
+                      />
+                        Comunicado
+                    </label>
+                  </DivItem>
+                </DivMenu>
+              )
+            }
           </Typography>
           <Typography
             margin="4px"
