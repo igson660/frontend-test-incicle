@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import * as allData from '../../../data';
 import { Typography, Button } from '@mui/material';
 import { Box } from '@mui/system';
 import { useAppContext } from '../../hooks';
@@ -21,6 +22,8 @@ const DivMenu = styled.div`
 `;
 
 const DivItem = styled.div`
+  margin: 0;
+  padding: 0;
   height: 5vh;
   &:hover{
     background-color: #c0bbbb;
@@ -28,12 +31,21 @@ const DivItem = styled.div`
 `;
 
 export const Main = () => {
-  const { setMainData, mainData, } = useAppContext();
+  const { setMainData, mainData } = useAppContext();
   const [menu, setMenu] = useState(false);
   const [evento, setEvento] = useState(false);
   const [publi, setPubli] = useState(false);
   const [comun, setComun] = useState(false);
 
+  useEffect(() => {
+    const data = allData.data.data;
+    const dataEvent = evento ? data.filter(({ type }) => type === 'event') : [];
+    const dataPubli = publi ? data.filter(({ type }) => type === 'publication') : [];
+    const dataComun = comun ? data.filter(({ type }) => type === 'release') : [];
+
+    const newData = [...dataEvent, ...dataPubli, ...dataComun ];
+    newData.length < 1 ? setMainData(data) : setMainData(newData);
+  }, [evento, publi, comun]);
 
 
   return(
